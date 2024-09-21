@@ -1,0 +1,23 @@
+{
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "notebook.formatOnSave.enabled": true,
+    "editor.rulers": [
+        88
+    ],
+    "[markdown]": {
+        "editor.defaultFormatter": null
+    },
+    "[rust]": {
+        "editor.inlayHints.enabled": "off",
+    },
+    "files.autoSave": "off",
+    // "workbench.panel.defaultLocation": "right",
+    "gitlens.showWelcomeOnInstall": false,
+    "gitlens.showWhatsNewAfterUpgrades": false,
+    // "lldb.displayFormat": "auto",
+    // "lldb.showDisassembly": "auto",
+    // "lldb.dereferencePointers": true,
+    "lldb.consoleMode": "evaluate",
+    // "debug.allowBreakpointsEverywhere": true,
+}

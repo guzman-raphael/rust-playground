@@ -1,0 +1,64 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'user'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=user",
+                    "--package=orcapod"
+                ],
+                "filter": {
+                    "name": "user",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            // "sourceLanguages": [
+            //     "rust"
+            // ],
+        },
+        // {
+        //     "type": "lldb",
+        //     "request": "launch",
+        //     "name": "Debug unit tests in library 'orcapod'",
+        //     "cargo": {
+        //         "args": [
+        //             "test",
+        //             "--no-run",
+        //             "--lib",
+        //             "--package=orcapod"
+        //         ],
+        //         "filter": {
+        //             "name": "orcapod",
+        //             "kind": "lib"
+        //         }
+        //     },
+        //     "args": [],
+        //     "cwd": "${workspaceFolder}"
+        // },
+        // {
+        //     "type": "lldb",
+        //     "request": "launch",
+        //     "name": "Debug unit tests in executable 'user'",
+        //     "cargo": {
+        //         "args": [
+        //             "test",
+        //             "--no-run",
+        //             "--bin=user",
+        //             "--package=orcapod"
+        //         ],
+        //         "filter": {
+        //             "name": "user",
+        //             "kind": "bin"
+        //         }
+        //     },
+        //     "args": [],
+        //     "cwd": "${workspaceFolder}"
+        // },
+    ]
+}
