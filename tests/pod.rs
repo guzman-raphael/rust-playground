@@ -28,8 +28,8 @@ fn verify_composition() {
     };
     // println!("{:#?}", pod);
     // println!("{:#?}", pod_job);
-    impl_DockerOrchestrator! {[PodJob<'_>]}; // would prefer to avoid annonymous lifetime
-    impl_FileStorage! {[Pod, PodJob<'_>]}; // would prefer to avoid annonymous lifetime
+    impl_DockerOrchestrator! {[PodJob<'_>]}; // this array could be imported, would prefer to avoid annonymous lifetime
+    impl_FileStorage! {[Pod, PodJob<'_>]}; // this array could be imported, would prefer to avoid annonymous lifetime
     pod_job.launch();
     pod.store();
     pod_job.store();
