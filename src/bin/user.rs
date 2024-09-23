@@ -1,5 +1,5 @@
 // extern crate orcapod;
-use orcapod::flat::{Annotation, Pod};
+use orcapod::model::{Annotation, Pod};
 
 fn main() {
     let pod_name = String::from("test");

@@ -4,7 +4,78 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'user'",
+            "name": "Rust: Debug single integration test",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--tests",
+                    "--package=orcapod",
+                ],
+                "filter": {
+                    "kind": "test"
+                }
+            },
+            "args": [
+                "--exact",
+                "--nocapture",
+                "verify_composition",
+            ],
+            "cwd": "${workspaceFolder}",
+            // "sourceLanguages": [
+            //     "rust"
+            // ],
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Rust: Debug all integration tests",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--tests",
+                    "--package=orcapod",
+                ],
+                "filter": {
+                    "kind": "test"
+                }
+            },
+            "args": [
+                "--exact",
+                "--nocapture",
+            ],
+            "cwd": "${workspaceFolder}",
+            // "sourceLanguages": [
+            //     "rust"
+            // ],
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Rust: Debug unit tests",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=orcapod"
+                ],
+                "filter": {
+                    "name": "orcapod",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            // "sourceLanguages": [
+            //     "rust"
+            // ],
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Rust: Debug executable 'user'",
             "cargo": {
                 "args": [
                     "build",
@@ -22,43 +93,27 @@
             //     "rust"
             // ],
         },
-        // {
-        //     "type": "lldb",
-        //     "request": "launch",
-        //     "name": "Debug unit tests in library 'orcapod'",
-        //     "cargo": {
-        //         "args": [
-        //             "test",
-        //             "--no-run",
-        //             "--lib",
-        //             "--package=orcapod"
-        //         ],
-        //         "filter": {
-        //             "name": "orcapod",
-        //             "kind": "lib"
-        //         }
-        //     },
-        //     "args": [],
-        //     "cwd": "${workspaceFolder}"
-        // },
-        // {
-        //     "type": "lldb",
-        //     "request": "launch",
-        //     "name": "Debug unit tests in executable 'user'",
-        //     "cargo": {
-        //         "args": [
-        //             "test",
-        //             "--no-run",
-        //             "--bin=user",
-        //             "--package=orcapod"
-        //         ],
-        //         "filter": {
-        //             "name": "user",
-        //             "kind": "bin"
-        //         }
-        //     },
-        //     "args": [],
-        //     "cwd": "${workspaceFolder}"
-        // },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Rust: Debug unit tests in executable 'user'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=user",
+                    "--package=orcapod"
+                ],
+                "filter": {
+                    "name": "user",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            // "sourceLanguages": [
+            //     "rust"
+            // ],
+        },
     ]
 }
