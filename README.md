@@ -8,8 +8,8 @@ cargo build -r # build prod target w/ optimizations
 
 #### TODO
 
-- [X] store
-- [X] orchestrator
+- [X] store approach
+- [X] orchestrator approach
 - [ ] handling files
 
 #### Ref
